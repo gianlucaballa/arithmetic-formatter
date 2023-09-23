@@ -115,7 +115,7 @@ def arithmetic_arranger(list, show_answer):
 # insert input
 list = []
 while True:
-    problem = input('Insert problem with 2 natural numbers (4 digits max each) as "a +/- b", or type stop: ')
+    problem = input('Insert problem with 2 natural numbers, 4 digits max, as "a +/- b", or type stop: ')
     if problem.lower() == 'stop':
         break
     try:
