@@ -4,4 +4,4 @@ Function that receives a list of strings that are arithmetic problems, and arran
 
 This exercise comes from: https://www.freecodecamp.org/learn/scientific-computing-with-python/scientific-computing-with-python-projects/arithmetic-formatter
 
-I made some modifications to the exercise and expanded it.
+I made some modifications to the exercise and expanded it. I used Atom to write it.
