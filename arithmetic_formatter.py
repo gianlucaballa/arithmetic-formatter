@@ -67,7 +67,7 @@ def arithmetic_arranger(list, show_answer):
             len2 = len(number2)
             lensum = len(str(sum))
             max_width = max(len1, len2, lensum)
-            if max_width <= 4:
+            if max_width <= 3:
                 print(' ', str(sum).rjust(max_width), end='    ')
             else:
                 print('', str(sum).rjust(max_width), end='    ')
