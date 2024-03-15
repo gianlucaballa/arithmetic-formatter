@@ -10,15 +10,15 @@ def arithmetic_arranger(list, show_answer):
             number1 = new_string[0]
             operator = new_string[1]
             number2 = new_string[2]
-            if operator == '+':
+            if operator == "+":
                 sum = int(number1) + int(number2)
             else:
                 sum = int(number1) - int(number2)
             len1 = len(number1)
             len2 = len(number2)
             max_width = max(len1, len2)
-            print(' ', number1.rjust(max_width), end='    ')
-        print('')
+            print(" ", number1.rjust(max_width), end="    ")
+        print("")
 
         # output of the second line
         for string in list:
@@ -26,15 +26,15 @@ def arithmetic_arranger(list, show_answer):
             number1 = new_string[0]
             operator = new_string[1]
             number2 = new_string[2]
-            if operator == '+':
+            if operator == "+":
                 sum = int(number1) + int(number2)
             else:
                 sum = int(number1) - int(number2)
             len1 = len(number1)
             len2 = len(number2)
             max_width = max(len1, len2)
-            print(operator, (str(abs(int(number2)))).rjust(max_width), end='    ')
-        print('')
+            print(operator, (str(abs(int(number2)))).rjust(max_width), end="    ")
+        print("")
 
         # output of the third line (dashes)
         for string in list:
@@ -42,16 +42,16 @@ def arithmetic_arranger(list, show_answer):
             number1 = new_string[0]
             operator = new_string[1]
             number2 = new_string[2]
-            if operator == '+':
+            if operator == "+":
                 sum = int(number1) + int(number2)
             else:
                 sum = int(number1) - int(number2)
             len1 = len(number1)
             len2 = len(number2)
             max_width = max(len1, len2)
-            dashes = '-'*max_width+'--'
-            print(dashes, end='    ')
-        print('')
+            dashes = "-" * max_width + "--"
+            print(dashes, end="    ")
+        print("")
 
         # output of the last line (result)
         for string in list:
@@ -59,7 +59,7 @@ def arithmetic_arranger(list, show_answer):
             number1 = new_string[0]
             operator = new_string[1]
             number2 = new_string[2]
-            if operator == '+':
+            if operator == "+":
                 sum = int(number1) + int(number2)
             else:
                 sum = int(number1) - int(number2)
@@ -68,9 +68,9 @@ def arithmetic_arranger(list, show_answer):
             lensum = len(str(sum))
             max_width = max(len1, len2, lensum)
             if max_width <= 3:
-                print(' ', str(sum).rjust(max_width), end='    ')
+                print(" ", str(sum).rjust(max_width), end="    ")
             else:
-                print('', str(sum).rjust(max_width), end='    ')
+                print("", str(sum).rjust(max_width), end="    ")
 
     # do not return result if the second argument of the function is False
     else:
@@ -84,8 +84,8 @@ def arithmetic_arranger(list, show_answer):
             len1 = len(number1)
             len2 = len(number2)
             max_width = max(len1, len2)
-            print(' ', number1.rjust(max_width), end='    ')
-        print('')
+            print(" ", number1.rjust(max_width), end="    ")
+        print("")
 
         # output of the second line
         for string in list:
@@ -96,8 +96,8 @@ def arithmetic_arranger(list, show_answer):
             len1 = len(number1)
             len2 = len(number2)
             max_width = max(len1, len2)
-            print(operator, (str(abs(int(number2)))).rjust(max_width), end='    ')
-        print('')
+            print(operator, (str(abs(int(number2)))).rjust(max_width), end="    ")
+        print("")
 
         # output of the third line (dashes)
         for string in list:
@@ -108,40 +108,40 @@ def arithmetic_arranger(list, show_answer):
             len1 = len(number1)
             len2 = len(number2)
             max_width = max(len1, len2)
-            dashes = '-'*max_width+'--'
-            print(dashes, end='    ')
+            dashes = "-" * max_width + "--"
+            print(dashes, end="    ")
 
 
 # insert input
 list = []
 while True:
-    problem = input('Insert problem with 2 numbers as "a +/- b" or type stop: ')
-    if problem.lower() == 'stop':
+    problem = input('Insert problem with 2 num as "a +/- b" or type stop: ')
+    if problem.lower() == "stop":
         break
     try:
         num1, operator, num2 = problem.split()
         num1 = int(num1)
         num2 = int(num2)
     except ValueError:
-        print('Error: Follow instructions and use spaces')
+        print("Error: Follow instructions and use spaces")
         quit()
     if len(str(num1)) > 4 or len(str(num2)) > 4:
-        print('Error: Numbers cannot be more than four digits')
+        print("Error: Numbers cannot be more than four digits")
         quit()
-    elif operator != '+' and operator != '-':
+    elif operator != "+" and operator != "-":
         print('Error: Operator must be "+" or "-"')
         quit()
     else:
         list.append(problem)
         if len(list) > 5:
-            print('Error: Too many problems')
+            print("Error: Too many problems")
             quit()
         else:
             print(list)
 
 # decide if the second argument of the function is True or False
-question = input('Do you want to visualise the result? y/n: ')
-show_answer = question == 'y'
+question = input("Do you want to visualise the result? y/n: ")
+show_answer = question == "y"
 
 # call the function
 arithmetic_arranger(list, show_answer)
